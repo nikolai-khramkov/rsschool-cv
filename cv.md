@@ -4,11 +4,12 @@
 **Python • TypeScript • Vue • Nuxt • PostgreSQL • AI**
 
 📍 Москва, Россия  
-📧 nikolai.khramkov@gmail.com  
+📧 [nikolai.khramkov@gmail.com]  
 📱 @nikolai_khramkov  
-🔗 GitHub: https://github.com/nikolai-khramkov  
+🔗 GitHub: [https://github.com/nikolai-khramkov]
 
 ---
+
 ## О себе
 
 Разработчик с сильным предпринимательским, продуктовым и стратегическим бэкграундом.
@@ -22,16 +23,20 @@
 Более 20 лет профессионального опыта в предпринимательстве, операционном управлении, финансах, продуктовой работе и стратегическом маркетинге позволяют понимать не только код, но и задачи бизнеса, пользователей и продукта.
 
 ---
+
 ## Ключевые технические навыки
 
 ### Языки
+
 - Python
 - TypeScript
 - SQL
 - HTML
 - CSS
+
 ### Frontend
-- Vue.js 
+
+- Vue.js  
 - Nuxt 4
 - SSR / CSR
 - Tailwind CSS
@@ -40,11 +45,15 @@
 - GSAP
 - Motion-v
 - Figma
+
 ### Backend и CMS
+
 - Python
 - FastAPI
 - Payload CMS
+
 ### AI / Machine Learning
+
 - AI Agents Development
 - Open spec Development
 - Computer Vision
@@ -53,23 +62,28 @@
 - основы RAG
 - ComfyUI
 - InvokeAI
+
 ### DevOps / Infrastructure
+
 - Linux
 - Docker / Compose
 - Git
 - SSH
 - VPS / Proxmox
 - S3-compatible storage
-- CI/CD 
+- CI/CD
 - Dokploy
 - DNS / SSL
 
 ---
+
 ## Последние проекты
+
 [https://vernadski.ru/](https://vernadski.ru/)  
 [https://maxtuguchev.com/](https://maxtuguchev.com/)  
 
 ## Пример кода
+
 ```text
 <script setup lang="ts">
 const slides = 6
@@ -100,33 +114,40 @@ function syncActive() {
 </script>
 ```
 
-### Стратегический маркетолог 
+### Стратегический маркетолог  
 
 16 лет консультационной практики с предпринимателями, руководителями и высококвалифицированными специалистами. Основные компетенции:
+
 - стратегическое позиционирование;
-- анализ рынка;   
+- анализ рынка;
 - конкурентный анализ;  
-- продуктовая стратегия;   
-- Customer Research;   
-- Value Proposition;   
-- Go-to-Market Strategy;   
-- Jobs-to-be-Done;   
-- психология потребительского поведения;   
-- Narrative Design;   
-- разработка новых продуктов.   
+- продуктовая стратегия;
+- Customer Research;
+- Value Proposition;
+- Go-to-Market Strategy;
+- Jobs-to-be-Done;
+- психология потребительского поведения;
+- Narrative Design;
+- разработка новых продуктов.
 
 Стратегический опыт использую в IT для более глубокого понимания продукта, пользователя, бизнес-ограничений и целей разработки.
 
 ---
-## Образование
+
+## Образование  
 
 ### MSc — Компьютерное зрение и нейронные сети
-Томский государственный университет  
+
+Томский государственный университет
+
 ### MBA — Стратегический менеджмент и предпринимательство
+
 Московский государственный университет имени М. В. Ломоносова
 
 ---
+
 ## Управленческие и продуктовые компетенции
+
 - Product Ownership
 - Product Strategy
 - постановка и декомпозиция задач
@@ -142,5 +163,7 @@ function syncActive() {
 Способен работать как разработчик и одновременно понимать продуктовый и бизнес-контекст задачи.
 
 ---
+
 ## Английский язык
-**Уровень: B2**
+
+**Уровень: B2**  
