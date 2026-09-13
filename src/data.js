@@ -5,10 +5,10 @@ export const site = {
       'Full-Stack разработчик и product engineer. Python, TypeScript, Vue, Nuxt, PostgreSQL, AI. Москва.',
   },
   person: {
-    name: 'Николай Храмков',
+    name: 'Nikolai Khramkov',
     role: 'Full-Stack Developer / Product Engineer',
     stack: 'Python • TypeScript • Vue • Nuxt • PostgreSQL • AI',
-    location: 'Москва, Россия',
+    location: 'Moscow, Russia',
     email: 'nikolai.khramkov@gmail.com',
     telegram: 'nikolai_khramkov',
     telegramUrl: 'https://t.me/nikolai_khramkov',
@@ -32,8 +32,8 @@ export const site = {
     headline:
       'Full-stack разработчик с продуктовым и стратегическим бэкграундом',
     about: [
-      'Проектирую цифровые продукты целиком: от бизнес-задачи, сценариев и структуры данных до стека, frontend, backend и выкладки.',
-      'Основной стек — Python, TypeScript, Vue, Nuxt, PostgreSQL, Linux и Docker. Параллельно получаю MSc в компьютерном зрении и работаю с LLM, генеративными моделями и AI-агентами.',
+      'Проектирую цифровые с полным циклом ответственности: от бизнес-задачи и стратегии до запуска на рынке.',
+      'Основной стек — Python, TypeScript, Vue, Nuxt, PostgreSQL, Linux и Docker. Параллельно получаю MSc в компьютерном зрении и ML.',
     ],
     resumeLabel: 'Открыть резюме',
     scrollLabel: 'Scroll down',
@@ -43,16 +43,16 @@ export const site = {
     facts: [
       {
         title: 'Location',
-        text: 'Москва, Россия.\nЖивёт и работает удалённо и в городе.',
+        text: 'Москва, Россия.\nУдалённо или в городе.',
       },
       {
         title: 'Education',
-        text: 'MSc — компьютерное зрение и нейронные сети, ТГУ.\nMBA — стратегический менеджмент, МГУ.',
+        text: 'MBA — стратегический менеджмент, МГУ.\nMSc — компьютерное зрение и нейронные сети, ТГУ.',
       },
     ],
     timeline: [
       {
-        year: 'Сейчас',
+        year: '2+',
         title: 'Full-Stack Developer / Product Engineer',
         period: 'Продуктовая разработка',
         points: [
@@ -61,16 +61,16 @@ export const site = {
         ],
       },
       {
-        year: '16 лет',
+        year: '16+',
         title: 'Стратегический маркетолог',
         period: 'Консультационная практика',
         points: [
-          'Работал с предпринимателями, руководителями и экспертами: позиционирование, рынок, конкуренты, JTBD, value proposition и go-to-market.',
+          'Работаю с предпринимателями, руководителями и экспертами: позиционирование, рынок, конкуренты, JTBD, value proposition и go-to-market.',
           'Этот опыт использую в разработке, чтобы видеть продукт, пользователя и бизнес-ограничения, а не только код.',
         ],
       },
       {
-        year: '20+ лет',
+        year: '20+',
         title: 'Предпринимательство и управление',
         period: 'Операции, финансы, продукт',
         points: [
@@ -91,8 +91,6 @@ export const site = {
           'Nuxt 4',
           'SSR / CSR',
           'Tailwind CSS',
-          'DaisyUI',
-          'Nuxt UI',
           'GSAP',
           'Motion-v',
           'Figma',
@@ -106,8 +104,9 @@ export const site = {
         title: 'AI / ML',
         items: [
           'AI Agents',
-          'Computer Vision',
-          'Generative AI',
+          'Spec Dev',
+          'CV',
+          'Gen AI',
           'RAG',
           'Fine-tuning',
           'ComfyUI',
@@ -121,10 +120,10 @@ export const site = {
           'Docker',
           'Git',
           'CI/CD',
-          'VPS / Proxmox',
+          'VPS',
+          'Proxmox',
           'Dokploy',
-          'S3',
-          'DNS / SSL',
+          'S3'
         ],
       },
       {
@@ -140,25 +139,25 @@ export const site = {
     ],
   },
   work: {
-    title: 'My Work',
+    title: 'Projects',
     intro:
-      'Недавние проекты, которые я проектировал и собирал целиком — от структуры и интерфейса до запуска.',
+      'Последние проекты, в которых я проектировал маркетинг, создавал архитектуру, занимался full-stack разработкой и выводил на рынок.',
     items: [
       {
         title: 'ВернадсКий',
-        category: 'Nuxt / Product Site',
+        category: 'Product Site / Nuxt 4 / Tailwind CSS',
         description:
-          'Сайт бильярдного клуба в Москве: атмосфера, тарифы, залы, ресторан и события. Современный frontend с акцентом на вайб и конверсию в запись.',
+          'Сайт бильярдного клуба Вернадский. Современный frontend с акцентом на вайб и конверсию.',
         href: 'https://vernadski.ru/',
-        image: 'work-vernadski.svg',
+        image: 'vernadski.webp',
       },
       {
         title: 'Max Tuguchev',
-        category: 'Personal Brand / Vue',
+        category: 'Personal Brand / Nuxt 4 / Tailwind CSS',
         description:
-          'Персональный сайт советника по недвижимости в Дубае. Строгая типографика, двуязычность и ясная упаковка экспертизы для капитальных решений.',
+          'Персональный сайт советника по недвижимости в Дубае. Строгая типографика, двуязычность и ясная упаковка экспертизы.',
         href: 'https://maxtuguchev.com/',
-        image: 'work-tuguchev.svg',
+        image: 'maxtuguchev.webp',
       },
     ],
     moreLabel: 'Все проекты на GitHub',
@@ -168,5 +167,12 @@ export const site = {
     title: "Let's Work Together",
     questions: 'Have Questions?',
     available: 'I am Available at',
+  },
+  footer: {
+    courseLabel: 'RS School · Fullstack Engineering',
+    courseHref:
+      'https://github.com/rolling-scopes-school/tasks/tree/master/fullstack-engineering',
+    logo: 'rs-school-logo.svg',
+    logoAlt: 'RS School',
   },
 }

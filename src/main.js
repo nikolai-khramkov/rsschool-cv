@@ -3,7 +3,7 @@ import { site } from './data.js'
 import { icons } from './icons.js'
 
 const root = document.querySelector('#app')
-const { person, nav, socials, hero, biography, work, contact } = site
+const { person, nav, socials, hero, biography, work, contact, footer } = site
 
 const sectionAccent = {
   home: '#e7be21',
@@ -69,14 +69,14 @@ root.innerHTML = `
     <main class="lg:w-1/2">
       <section id="home" class="bg-gold px-8 py-12 lg:min-h-screen lg:px-10 lg:py-10">
         <h2 class="section-title font-black">${hero.roles.join('<br>')}</h2>
-        <p class="mt-8 max-w-xl text-[2rem] leading-10 lg:text-[2.5rem] lg:leading-8">${hero.headline}</p>
+        <p class="mt-8 max-w-xl text-[2rem] leading-10 lg:text-[2.5rem] lg:leading-10">${hero.headline}</p>
         ${hero.about.map((p) => `<p class="mt-6 max-w-xl text-lg leading-7">${p}</p>`).join('')}
         <div class="mt-10">
           <a class="inline-block bg-ink px-7 py-3 text-lg text-white" href="${import.meta.env.BASE_URL}cv.md" target="_blank" rel="noreferrer">${hero.resumeLabel}</a>
         </div>
         <a class="mt-6 inline-flex items-center gap-2 text-lg" href="#biography">
           ${hero.scrollLabel}
-          <span class="inline-flex size-5">${icons.arrow}</span>
+          <span class="inline-flex size-5 animate-bounce">${icons.arrow}</span>
         </a>
       </section>
 
@@ -99,13 +99,13 @@ root.innerHTML = `
             .map(
               (item) => `
               <article>
-                <div class="grid gap-6 sm:grid-cols-[7.5rem_1fr]">
-                  <h3 class="text-[3.25rem] leading-none">${item.year}</h3>
+                <div class="grid  gap-6 sm:grid-cols-[6.5rem_1fr]">
+                  <h3 class="text-[3.25rem] font-heading font-bold leading-none">${item.year}</h3>
                   <div>
                     <p class="text-[1.65rem] leading-8">${item.title}</p>
                     <p class="mt-2 text-lg">${item.period}</p>
                     <ul class="mt-5 space-y-3 text-lg leading-7">
-                      ${item.points.map((point) => `<li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-ink"></span><span>${point}</span></li>`).join('')}
+                      ${item.points.map((point) => `<li class="flex gap-3"><span class="inline-flex rotate-270 size-5 mt-1.25">${icons.arrow}</span></span><span>${point}</span></li>`).join('')}
                     </ul>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ root.innerHTML = `
             .map(
               (group) => `
               <div>
-                <h3 class="text-xl">${group.title}</h3>
+                <h3 class="text-xl font-bold">${group.title}</h3>
                 <p class="mt-3 text-lg leading-7">${group.items.join(', ')}</p>
               </div>
             `,
@@ -135,12 +135,12 @@ root.innerHTML = `
           ${work.items
             .map(
               (item) => `
-              <a class="work-card block text-inherit no-underline" href="${item.href}" target="_blank" rel="noreferrer">
+              <a class="work-card mt-15 block text-inherit no-underline" href="${item.href}" target="_blank" rel="noreferrer">
                 <div class="overflow-hidden bg-ink">
-                  <img class="work-cover aspect-[4/2] w-full object-cover" src="${import.meta.env.BASE_URL}${item.image}" alt="${item.title}">
+                  <img class="work-cover aspect-4/2 w-full object-cover" src="${import.meta.env.BASE_URL}${item.image}" alt="${item.title}">
                 </div>
-                <h3 class="mt-6 text-[2.4rem] leading-none">${item.title}</h3>
-                <p class="mt-3 text-lg">${item.category}</p>
+                <h3 class="mt-6 text-[2.4rem] font-heading font-bold text-white leading-none">${item.title}</h3>
+                <p class="mt-3 font-bold text-lg">${item.category}</p>
                 <p class="mt-3 max-w-xl text-lg leading-7">${item.description}</p>
               </a>
             `,
@@ -150,18 +150,30 @@ root.innerHTML = `
         <a class="mt-12 inline-block bg-ink px-7 py-3 text-lg text-white" href="${work.moreHref}" target="_blank" rel="noreferrer">${work.moreLabel}</a>
       </section>
 
-      <section id="contact" class="bg-sky px-8 py-14 lg:min-h-screen lg:px-10">
+      <section id="contact" class="flex min-h-svh flex-col bg-sky px-8 py-14 lg:min-h-screen lg:px-10">
         <h2 class="section-title">${contact.title}</h2>
         <h3 class="mt-10 text-[2.5rem] leading-none">${contact.questions}</h3>
-        <div class="mt-6 space-y-1 text-lg">
-          <a class="block underline underline-offset-4" href="mailto:${person.email}">${person.email}</a>
-          <a class="block underline underline-offset-4" href="${person.telegramUrl}">@${person.telegram}</a>
-          <a class="block underline underline-offset-4" href="${person.github}" target="_blank" rel="noreferrer">${person.githubLabel}</a>
+        <div class="mt-6 space-y-3 text-lg">
+          <a class="flex items-center gap-3 underline underline-offset-4" href="mailto:${person.email}">
+            <span class="inline-flex mt-1.5 size-6 shrink-0 [&_svg]:size-full" aria-hidden="true">${icons.email}</span>
+            ${person.email}
+          </a>
+          <a class="flex items-center gap-3 underline underline-offset-4" href="${person.telegramUrl}">
+            <span class="inline-flex mt-1 size-6 shrink-0 [&_svg]:size-full" aria-hidden="true">${icons.telegram}</span>
+            @${person.telegram}
+          </a>
+          <a class="flex items-center gap-3 underline underline-offset-4" href="${person.github}" target="_blank" rel="noreferrer">
+            <span class="inline-flex mt-1 size-6 shrink-0 [&_svg]:size-full" aria-hidden="true">${icons.github}</span>
+            ${person.githubLabel}
+          </a>
         </div>
-        <p class="mt-14 text-xl">${contact.available}</p>
-        <div class="mt-5 flex gap-4">
-          ${socialList('size-6')}
-        </div>
+
+        <footer class="mt-16 lg:mt-auto">
+          <a class="inline-flex items-center gap-4 text-inherit no-underline" href="${footer.courseHref}" target="_blank" rel="noreferrer">
+            <img class="h-10 w-auto" src="${import.meta.env.BASE_URL}${footer.logo}" alt="${footer.logoAlt}">
+            <span class="text-lg underline underline-offset-4">${footer.courseLabel}</span>
+          </a>
+        </footer>
       </section>
     </main>
   </div>
