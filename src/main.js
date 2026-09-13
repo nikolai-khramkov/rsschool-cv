@@ -30,7 +30,7 @@ function socialList(extraClass = '') {
 
 root.innerHTML = `
   <div class="lg:flex lg:min-h-screen">
-    <aside class="hero-panel relative flex min-h-[100svh] flex-col justify-between overflow-hidden px-8 py-10 text-white lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:px-10" style="--hero-image: url('${import.meta.env.BASE_URL}nikolai_khramkov.webp')">
+    <aside class="hero-panel relative flex min-h-svh flex-col justify-between overflow-hidden px-8 py-10 text-white lg:sticky lg:top-0 lg:h-screen lg:w-1/2 lg:px-10" style="--hero-image: url('${import.meta.env.BASE_URL}nikolai_khramkov.webp')">
       <div class="relative z-10 flex items-start justify-between gap-6">
         <nav class="hidden flex-col gap-1 md:flex" aria-label="Primary">
           ${nav
@@ -51,11 +51,11 @@ root.innerHTML = `
         </div>
       </div>
 
-      <div class="relative z-10">
-        <h1 class="display-title max-w-[11ch]">${person.name}</h1>
-      </div>
 
       <div class="relative z-10 space-y-3 text-[1.05rem] leading-7">
+      <div class="relative z-10">
+        <h1 class="display-title max-w-[19ch]">${person.name}</h1>
+      </div>
         <a class="underline decoration-white/40 underline-offset-4 hover:decoration-white" href="mailto:${person.email}">${person.email}</a>
         <p class="text-white/80">${person.role}<br>${person.location}</p>
         <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
@@ -68,8 +68,8 @@ root.innerHTML = `
 
     <main class="lg:w-1/2">
       <section id="home" class="bg-gold px-8 py-12 lg:min-h-screen lg:px-10 lg:py-10">
-        <h2 class="section-title">${hero.roles.join('<br>')}</h2>
-        <p class="mt-8 max-w-xl text-[2rem] leading-10 lg:text-[2.5rem] lg:leading-[3.25rem]">${hero.headline}</p>
+        <h2 class="section-title font-black">${hero.roles.join('<br>')}</h2>
+        <p class="mt-8 max-w-xl text-[2rem] leading-10 lg:text-[2.5rem] lg:leading-8">${hero.headline}</p>
         ${hero.about.map((p) => `<p class="mt-6 max-w-xl text-lg leading-7">${p}</p>`).join('')}
         <div class="mt-10">
           <a class="inline-block bg-ink px-7 py-3 text-lg text-white" href="${import.meta.env.BASE_URL}cv.md" target="_blank" rel="noreferrer">${hero.resumeLabel}</a>
@@ -137,7 +137,7 @@ root.innerHTML = `
               (item) => `
               <a class="work-card block text-inherit no-underline" href="${item.href}" target="_blank" rel="noreferrer">
                 <div class="overflow-hidden bg-ink">
-                  <img class="work-cover aspect-[4/3] w-full object-cover" src="${import.meta.env.BASE_URL}${item.image}" alt="${item.title}">
+                  <img class="work-cover aspect-[4/2] w-full object-cover" src="${import.meta.env.BASE_URL}${item.image}" alt="${item.title}">
                 </div>
                 <h3 class="mt-6 text-[2.4rem] leading-none">${item.title}</h3>
                 <p class="mt-3 text-lg">${item.category}</p>
@@ -197,18 +197,20 @@ function setActive(id) {
   })
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-    if (visible?.target?.id) setActive(visible.target.id)
-  },
-  { rootMargin: '-35% 0px -45% 0px', threshold: [0.1, 0.25, 0.5] },
-)
+function syncActiveFromScroll() {
+  const marker = window.innerHeight * 0.35
+  let currentId = sections[0]?.id
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= marker) {
+      currentId = section.id
+    }
+  }
+  if (currentId) setActive(currentId)
+}
 
-sections.forEach((section) => observer.observe(section))
-setActive('home')
+window.addEventListener('scroll', syncActiveFromScroll, { passive: true })
+window.addEventListener('resize', syncActiveFromScroll)
+syncActiveFromScroll()
 
 document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
   mobileMenu.classList.remove('hidden')
