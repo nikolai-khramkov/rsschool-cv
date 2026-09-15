@@ -1,6 +1,7 @@
 import './style.css'
 import { site } from './data.js'
 import { icons } from './icons.js'
+import Lenis from 'lenis'
 
 const root = document.querySelector('#app')
 const { person, nav, socials, hero, biography, work, contact, footer } = site
@@ -233,3 +234,5 @@ document.querySelector('.mobile-close')?.addEventListener('click', () => {
 mobileMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
 })
+
+const lenis = new Lenis({ autoRaf: true })
