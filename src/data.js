@@ -32,8 +32,8 @@ export const site = {
     headline:
       'Full-stack разработчик с продуктовым и стратегическим бэкграундом',
     about: [
-      'Проектирую цифровые продукты с полным циклом ответственности: от бизнес-задачи и стратегии до запуска на рынке.',
-      'Основной стек — Python, TypeScript, Vue, Nuxt, PostgreSQL, Linux и Docker. Параллельно получаю MSc в компьютерном зрении и ML.',
+      'Проектирую цифровые продукты с полным циклом ответственности — от бизнес-задачи и продуктовой стратегии до разработки и запуска.',
+      'Основной стек: Python, TypeScript, Vue, Nuxt, PostgreSQL, Linux и Docker. Параллельно получаю MSc в CV и ML.',
     ],
     resumeHref: 'https://nikolai-khramkov.github.io/rsschool-cv/cv',
     resumeLabel: 'Открыть резюме',
