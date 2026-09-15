@@ -35,6 +35,7 @@ export const site = {
       'Проектирую цифровые продукты с полным циклом ответственности: от бизнес-задачи и стратегии до запуска на рынке.',
       'Основной стек — Python, TypeScript, Vue, Nuxt, PostgreSQL, Linux и Docker. Параллельно получаю MSc в компьютерном зрении и ML.',
     ],
+    resumeHref: 'https://nikolai-khramkov.github.io/rsschool-cv/cv',
     resumeLabel: 'Открыть резюме',
     scrollLabel: 'Scroll down',
   },
