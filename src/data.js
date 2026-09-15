@@ -1,6 +1,6 @@
 export const site = {
   meta: {
-    title: 'Николай Храмков — Full-Stack Developer / Product Engineer',
+    title: 'Nikolai Khramkov — Full-Stack Developer / Product Engineer',
     description:
       'Full-Stack разработчик и product engineer. Python, TypeScript, Vue, Nuxt, PostgreSQL, AI. Москва.',
   },
