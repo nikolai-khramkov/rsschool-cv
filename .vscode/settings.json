@@ -1,0 +1,35 @@
+{
+	"prettier.enable": false,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue"
+	],
+	"[vue]": {
+		"editor.defaultFormatter": null
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": null
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": null
+	},
+	"cSpell.words": [
+		"prostor",
+		"СТОР",
+		"ПРО",
+		"kedr",
+		"Кедр",
+		"Керам",
+		"keram",
+
+	],
+	"cSpell.language": "en,ru"
+}
