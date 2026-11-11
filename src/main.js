@@ -1,6 +1,7 @@
 import './style.css'
 import { site } from './data.js'
 import { icons } from './icons.js'
+import Lenis from 'lenis'
 
 const root = document.querySelector('#app')
 const { person, nav, socials, hero, biography, work, contact, footer } = site
@@ -72,7 +73,7 @@ root.innerHTML = `
         <p class="mt-8 max-w-xl text-[2rem] leading-10 lg:text-[2.5rem] lg:leading-10">${hero.headline}</p>
         ${hero.about.map((p) => `<p class="mt-6 max-w-xl text-lg leading-7">${p}</p>`).join('')}
         <div class="mt-10">
-          <a class="inline-block bg-ink px-7 py-3 text-lg text-white" href="${import.meta.env.BASE_URL}cv.md" target="_blank" rel="noreferrer">${hero.resumeLabel}</a>
+          <a class="inline-block bg-ink px-7 py-3 text-lg text-white" href="${hero.resumeHref}" target="_blank" rel="noreferrer">${hero.resumeLabel}</a>
         </div>
         <a class="mt-6 inline-flex items-center gap-2 text-lg" href="#biography">
           ${hero.scrollLabel}
@@ -233,3 +234,5 @@ document.querySelector('.mobile-close')?.addEventListener('click', () => {
 mobileMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
 })
+
+const lenis = new Lenis({ autoRaf: true })
